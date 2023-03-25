@@ -1,0 +1,54 @@
+<body style="background-color: rgb(50, 50, 50);">
+    
+</body>
+<p style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-size: xx-large; color: white; text-align: center;">Welcome To CatHub!</p>
+
+
+<div style="display: flex; flex-wrap: wrap;" class="container">
+<input id="searchinput" style="  border: 2px solid red;
+border-radius: 7px;   margin: auto;
+  width: 40%;
+  border: 1px solid darkgray;
+  padding: 10px; background-color: gray;"  type="text">
+
+</div>
+   
+<img id="img1" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%; margin-top: 1%;" src="null.png" alt="">
+<img id="img2" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%;margin-top: 1%;"   src="null.png" alt="">
+<img id="img3" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%;margin-top: 1%;"   src="null.png" alt="">
+<img id="img4" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%;margin-top: 1%;"   src="null.png" alt="">
+<img id="img5" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%;margin-top: 1%;"   src="null.png" alt="">
+<img id="img6" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%;margin-top: 1%;"   src="null.png" alt="">
+<img id="img7" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%;margin-top: 1%;"   src="null.png" alt="">
+<img id="img8" width="20%" height="30%" style="height: 40%; width: 30%; margin-left: 1%; margin-bottom: 1%;margin-top: 1%;"   src="null.png" alt="">
+<script>
+// Search functionality
+document.onkeypress = function(e) { 
+    if (e.keyCode == 13) {
+        window.location.href = "?search=" + document.getElementById("searchinput").value
+    }
+}
+
+//loading content
+//check if there is search input
+const urlparams = new URLSearchParams(window.location.search)
+if (urlparams.has("search")) {
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=1"
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=2"
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=3"
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=4"
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=5"
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=6"
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=7"
+    document.getElementById("img1").src = "https://cataas.com/cat/" + urlparams.get("search") + "?cathub=8"
+} else { 
+    document.getElementById("img1").src = "https://cataas.com/cat?cathub=1"
+    document.getElementById("img2").src = "https://cataas.com/cat?cathub=2"
+    document.getElementById("img3").src = "https://cataas.com/cat?cathub=3"
+    document.getElementById("img4").src = "https://cataas.com/cat?cathub=4"
+    document.getElementById("img5").src = "https://cataas.com/cat?cathub=5"
+    document.getElementById("img6").src = "https://cataas.com/cat?cathub=6"
+    document.getElementById("img7").src = "https://cataas.com/cat?cathub=7"
+    document.getElementById("img8").src = "https://cataas.com/cat?cathub=8"
+}
+</script>
